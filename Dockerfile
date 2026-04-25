@@ -10,6 +10,9 @@ COPY . .
 ENV RAILS_ENV=production
 ENV RAILS_SERVE_STATIC_FILES=true
 
+# 👉 ここ追加（超重要）
+RUN bundle exec rails assets:precompile
+
 EXPOSE 3000
 
 CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0 -p $PORT"]
