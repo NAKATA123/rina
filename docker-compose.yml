@@ -1,21 +1,26 @@
-
 services:
   db:
     image: postgres:15
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
+      POSTGRES_DB: app_development
     volumes:
       - db-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"   # ←ここ変える（重要）
 
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0 -p 3000"
     volumes:
       - .:/app
     ports:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/app_development
 
 volumes:
   db-data:
