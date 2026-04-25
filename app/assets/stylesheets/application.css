@@ -1,0 +1,200 @@
+
+/* =====================
+   全体
+===================== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   ヘッダー
+===================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴ */
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* ナビ */
+nav {
+  display: flex;
+  gap: 25px;
+  margin-left: 180px;
+  flex: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+/* LINEボタン（ヘッダー） */
+.header-right {
+  margin-left: auto;
+}
+
+.line-btn {
+  background: #06C755;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* =====================
+   ヒーロー
+===================== */
+.hero {
+  height: 100vh;
+  background: url('/assets/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+/* =====================
+   セクション共通
+===================== */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.gray {
+  background: #f7f7f7;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #E91E63;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* =====================
+   フッター
+===================== */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-info,
+.footer-hours {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* フッターLINE */
+.footer-line {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-links {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #888;
+}
