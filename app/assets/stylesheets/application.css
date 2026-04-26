@@ -41,7 +41,7 @@ html {
   letter-spacing: 3px;
 }
 
-/* ナビ */
+/* ナビ（PC） */
 nav {
   display: flex;
   gap: 28px;
@@ -61,7 +61,7 @@ nav a:hover {
   color: #c89b5c;
 }
 
-/* LINEボタン（ヘッダー） */
+/* LINEボタン */
 .header-right .line-btn {
   background: linear-gradient(135deg, #00c300, #06e000);
   color: #fff;
@@ -277,17 +277,29 @@ h2 {
 }
 
 /* =====================
-   レスポンシブ
+   レスポンシブ（修正版）
 ===================== */
 @media (max-width: 768px) {
 
-  /* ナビ → スマホでも表示 */
   nav {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
+    gap: 12px;
+  }
+
+  nav a {
+    display: block;
+    width: 85%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 10px;
+    background: #f7f7f7;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  nav a:active {
+    background: #eaeaea;
   }
 
   .hero h1 {
