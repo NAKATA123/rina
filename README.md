@@ -1,24 +1,31 @@
-# README
+# Bridal Salon LUMIER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+会社ホームページ用の静的サイトです。RailsやPostgreSQLは使わず、HTML/CSS/JavaScriptと画像だけで配信できます。
 
-Things you may want to cover:
+## ページ
 
-* Ruby version
+- `/` トップページ
+- `/about/` ルミエールのご紹介
+- `/price/` 料金のご案内
+- `/privacy/` 個人情報の取り扱いについて
 
-* System dependencies
+## 内容の変更
 
-* Configuration
+- 文章やリンク: 各ページの `index.html`
+- デザイン: `assets/styles.css`
+- スマホメニューの動き: `assets/site.js`
+- 画像: `assets/images/`
 
-* Database creation
+## 公開
 
-* Database initialization
+Cloudflare Pages、Netlify、Vercel などの静的ホスティングにそのまま公開できます。
 
-* How to run the test suite
+ビルドコマンドは不要です。公開ディレクトリはリポジトリのルートを指定してください。
 
-* Services (job queues, cache servers, search engines, etc.)
+## ローカル確認
 
-* Deployment instructions
+HTMLファイルをブラウザで開くか、必要なら簡易サーバーで確認できます。
 
-* ...
+```sh
+python3 -m http.server 8000
+```
