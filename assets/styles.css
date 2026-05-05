@@ -10,6 +10,8 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #444;
   line-height: 1.6;
+  line-break: strict;
+  word-break: auto-phrase;
   background: #fffdf9;
   overflow-x: hidden;
 }
@@ -21,6 +23,11 @@ a {
 
 .text-chunk {
   display: inline-block;
+}
+
+.text-keep {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* =====================
@@ -92,11 +99,16 @@ a {
 
 /* LINEボタン */
 .line-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #8edb8e, #6bcf6b);
   color: #fff;
   padding: 10px 14px;
   border-radius: 20px;
   font-size: 13px;
+  line-height: 1.4;
+  white-space: nowrap;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -273,6 +285,7 @@ a {
   border-radius: 999px;
   font-size: 16px;
   letter-spacing: 1px;
+  white-space: nowrap;
 
   /* ふんわり感 */
   backdrop-filter: blur(6px);
@@ -360,8 +373,8 @@ h2 {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: 1.35fr 1.35fr 0.85fr 1.15fr;
+  gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -381,6 +394,14 @@ h2 {
 .footer a {
   color: #6b5b4d;
   font-size: 14px;
+}
+
+.footer-links {
+  grid-column: 1 / -1;
+}
+
+.footer-links a {
+  white-space: nowrap;
 }
 
 .footer .line-btn {
@@ -416,6 +437,108 @@ h2 {
 .page-hero p {
   color: #777;
   font-size: 16px;
+}
+
+/* =====================
+   ルミエールのご紹介
+===================== */
+.staff-section {
+  background: #fffdf9;
+  text-align: left;
+}
+
+.section-heading.staff-heading {
+  max-width: 980px;
+  text-align: center;
+}
+
+.staff-heading p {
+  margin: 12px 0 0;
+  color: #6a5f58;
+  line-height: 1.9;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.staff-card {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #eadfd6;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(107, 91, 77, 0.07);
+}
+
+.staff-photo {
+  display: block;
+  width: 168px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #eadfd6;
+  border-radius: 18px;
+  box-shadow:
+    0 14px 28px rgba(107, 91, 77, 0.1),
+    0 0 0 8px rgba(250, 247, 243, 0.72);
+}
+
+.staff-copy {
+  min-width: 0;
+}
+
+.staff-role {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 0 10px;
+  padding: 4px 12px;
+  background: #f8edf1;
+  border-radius: 999px;
+  color: #b66f84;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.staff-copy h3 {
+  margin: 0 0 12px;
+  color: #6b5b4d;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.staff-career {
+  margin: 0;
+}
+
+.staff-career div {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.staff-career dt {
+  color: #a08f82;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.staff-career dd {
+  margin: 0;
+  color: #5d534d;
+  font-size: 14px;
+  line-height: 1.9;
 }
 
 /* =====================
@@ -1223,6 +1346,20 @@ h2 {
     font-size: 30px;
   }
 
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-card {
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .staff-photo {
+    width: 140px;
+  }
+
   .price-row {
     flex-direction: column;
     gap: 6px;
@@ -1429,6 +1566,15 @@ h2 {
     font-size: 14px;
     line-height: 1.8;
   }
+
+  .staff-heading {
+    margin-bottom: 28px;
+  }
+
+  .staff-copy h3 {
+    font-size: 22px;
+    line-height: 1.45;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1443,6 +1589,15 @@ h2 {
 
   .member-card {
     grid-template-columns: 1fr;
+  }
+
+  .staff-card {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-photo {
+    width: 100%;
+    max-width: 220px;
   }
 
   .member-avatar {
