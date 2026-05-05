@@ -928,10 +928,50 @@ h2 {
 
 .stats-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   gap: 22px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto 22px;
+}
+
+.stats-summary div {
+  padding: 20px 22px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid #eadfd6;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(107, 91, 77, 0.06);
+}
+
+.stats-summary span,
+.data-points span {
+  display: block;
+  margin-bottom: 8px;
+  color: #9b8176;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.stats-summary strong {
+  color: #6b5b4d;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.stats-summary small {
+  margin-left: 3px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
 }
 
 .chart-card {
@@ -969,19 +1009,18 @@ h2 {
   box-shadow: 0 0 0 1px rgba(234, 223, 214, 0.9);
 }
 
-.donut-gender {
-  background: conic-gradient(#a7cbd0 0 42%, #d7a7b5 42% 100%);
-}
-
-.donut-age {
+.donut-area {
   background: conic-gradient(
-    #a7cbd0 0 7%,
-    #b8c9a8 7% 27%,
-    #ead9ad 27% 57%,
-    #d8b68d 57% 76%,
-    #d0a6a1 76% 86%,
-    #bab2cb 86% 95%,
-    #c8c0b8 95% 100%
+    #d7a7b5 0 42.9%,
+    #a7cbd0 42.9% 66.2%,
+    #b8c9a8 66.2% 82.3%,
+    #d8b68d 82.3% 88.8%,
+    #bab2cb 88.8% 92.7%,
+    #c8c0b8 92.7% 95.1%,
+    #ead9ad 95.1% 96.9%,
+    #d0a6a1 96.9% 98.4%,
+    #c7d8c8 98.4% 99.9%,
+    #e7ded6 99.9% 100%
   );
 }
 
@@ -993,14 +1032,14 @@ h2 {
 }
 
 .chart-legend span,
-.age-list li {
+.area-list li {
   display: flex;
   align-items: center;
   gap: 9px;
 }
 
 .chart-legend i,
-.age-list span {
+.area-list span {
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -1015,40 +1054,72 @@ h2 {
   background: #d7a7b5;
 }
 
-.age-chart {
+.area-chart {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
 }
 
-.age-chart .donut {
+.area-chart .donut {
   margin-bottom: 0;
 }
 
-.age-list {
+.area-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.age-list span {
+.area-list span {
   background: var(--legend-color);
 }
 
-.age-list li {
+.area-list li {
   justify-content: space-between;
   color: #5d534d;
   font-size: 14px;
 }
 
-.age-list strong {
+.area-list strong {
   margin-left: auto;
   color: #6b5b4d;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.data-points {
+  display: grid;
+  gap: 14px;
+}
+
+.data-points div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0e8e1;
+}
+
+.data-points div:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.data-points strong {
+  display: block;
+  color: #6b5b4d;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.data-points p {
+  margin: 6px 0 0;
+  color: #71675f;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .stats-note {
@@ -1212,7 +1283,8 @@ h2 {
 
   .members-hero-inner,
   .stats-layout,
-  .age-chart {
+  .stats-summary,
+  .area-chart {
     grid-template-columns: 1fr;
   }
 
@@ -1274,7 +1346,7 @@ h2 {
     padding: 24px 20px;
   }
 
-  .age-chart .donut {
+  .area-chart .donut {
     margin: 0 auto 18px;
   }
 
