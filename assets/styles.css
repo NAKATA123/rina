@@ -1595,6 +1595,7 @@ h2::after {
 .price-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   padding: 18px 24px;
   border-bottom: 1px solid #eadfd6;
@@ -1666,7 +1667,6 @@ h2::after {
 
 .pay-link {
   display: inline-block;
-  margin-top: 14px;
   font-size: 13px;
   color: #c89b5c;
   border: 1px solid #c89b5c;
@@ -1675,10 +1675,14 @@ h2::after {
   text-decoration: none;
   white-space: nowrap;
   transition: 0.2s;
+  flex-shrink: 0;
 }
 .pay-link:hover {
   background: #c89b5c;
   color: #fff;
+}
+.option-item .pay-link {
+  margin-top: 14px;
 }
 
 /* お客様の声 */
@@ -2437,6 +2441,9 @@ h2::after {
   .price-row {
     flex-direction: column;
     gap: 6px;
+  }
+  .price-row .pay-link {
+    align-self: flex-start;
   }
 
   .option-list {
