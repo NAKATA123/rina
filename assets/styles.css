@@ -1608,6 +1608,7 @@ h2::after {
 
 .price-row span {
   color: #6b5b4d;
+  flex: 1;
 }
 .price-row span small {
   font-size: 12px;
@@ -1618,6 +1619,8 @@ h2::after {
   color: #c89b5c;
   font-size: 20px;
   white-space: nowrap;
+  flex: 1;
+  text-align: center;
 }
 
 .price-note {
