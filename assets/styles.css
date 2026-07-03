@@ -1664,6 +1664,23 @@ h2::after {
   font-size: 20px;
 }
 
+.pay-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #c89b5c;
+  border: 1px solid #c89b5c;
+  border-radius: 999px;
+  padding: 5px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+.pay-link:hover {
+  background: #c89b5c;
+  color: #fff;
+}
+
 /* お客様の声 */
 .voices-section {
   padding-top: 70px;
