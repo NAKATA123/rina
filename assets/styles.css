@@ -1609,6 +1609,10 @@ h2::after {
 .price-row span {
   color: #6b5b4d;
 }
+.price-row span small {
+  font-size: 12px;
+  color: #999;
+}
 
 .price-row strong {
   color: #c89b5c;
