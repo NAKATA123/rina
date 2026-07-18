@@ -405,30 +405,6 @@ a {
   transform: translateX(90%) rotate(8deg);
 }
 
-.btn-pay {
-  position: relative;
-  display: inline-block;
-  margin-top: 30px;
-  background: linear-gradient(135deg, #c89b5c, #dbb87a);
-  color: #fff;
-  padding: 14px 40px;
-  border-radius: 999px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  border: none;
-  box-shadow: 0 8px 24px rgba(200,155,92,0.35);
-  transition: 0.3s;
-  overflow: hidden;
-  isolation: isolate;
-  text-decoration: none;
-}
-.btn-pay:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #b88a4c, #c89b5c);
-  box-shadow: 0 12px 28px rgba(200,155,92,0.45);
-}
-
 /* 共通セクション */
 section {
   padding: 100px 20px;
@@ -1619,7 +1595,6 @@ h2::after {
 .price-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 20px;
   padding: 18px 24px;
   border-bottom: 1px solid #eadfd6;
@@ -1632,19 +1607,12 @@ h2::after {
 
 .price-row span {
   color: #6b5b4d;
-  flex: 1;
-}
-.price-row span small {
-  font-size: 12px;
-  color: #999;
 }
 
 .price-row strong {
   color: #c89b5c;
   font-size: 20px;
   white-space: nowrap;
-  flex: 1;
-  text-align: center;
 }
 
 .price-note {
@@ -1694,117 +1662,6 @@ h2::after {
   margin-top: 18px;
   color: #c89b5c;
   font-size: 20px;
-}
-
-.payment-cta-section {
-  text-align: center;
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background: linear-gradient(135deg, #fdf6ec, #faf0e0);
-}
-
-.payment-cta-label {
-  font-size: 15px;
-  color: #8c7355;
-  letter-spacing: 0.5px;
-}
-
-.payment-cta-secure {
-  font-size: 13px;
-  color: #aaa;
-  margin-top: 4px;
-}
-
-.card-brands {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.payment-select-section {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 60px 20px 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.payment-plan h2 {
-  font-size: 18px;
-  color: #6b5b4d;
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eadfd6;
-}
-
-.payment-items {
-  background: #fff;
-  border: 1px solid #eadfd6;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-}
-
-.payment-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 24px;
-  border-bottom: 1px solid #eadfd6;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.payment-item:last-child {
-  border-bottom: none;
-}
-
-.payment-item:hover {
-  background: #fdf8f5;
-}
-
-.payment-item span {
-  color: #6b5b4d;
-  flex: 1;
-}
-
-.payment-item strong {
-  color: #c89b5c;
-  font-size: 18px;
-  white-space: nowrap;
-}
-
-.payment-arrow {
-  color: #c89b5c;
-  font-size: 20px;
-  flex: 0 !important;
-}
-
-.pay-link {
-  display: inline-block;
-  font-size: 13px;
-  color: #c89b5c;
-  border: 1px solid #c89b5c;
-  border-radius: 999px;
-  padding: 5px 16px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: 0.2s;
-  flex-shrink: 0;
-}
-.pay-link:hover {
-  background: #c89b5c;
-  color: #fff;
-}
-.option-item .pay-link {
-  margin-top: 14px;
 }
 
 /* お客様の声 */
@@ -2563,9 +2420,6 @@ h2::after {
   .price-row {
     flex-direction: column;
     gap: 6px;
-  }
-  .price-row .pay-link {
-    align-self: flex-start;
   }
 
   .option-list {
